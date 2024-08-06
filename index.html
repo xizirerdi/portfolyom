@@ -1,146 +1,123 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>efrîn's portfolio</title>
-        <style>
-
-            
-
-        html, body {
-                overflow-x: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                background-color: green;
-                max-width: 600px;
-            }       
-
-        .grid-container {
-            display: grid;
-            grid-row-gap: 0px;
-            grid-template-columns: auto;
-            padding: 0px;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
         }
-
-        body {background-color: darkgray;}
-        </style>
-
-    </head>
-    
-    <body>
-    
-    <div class="grid-container">
-
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="16.mp4" type="video/mp4">
-            <source src="16.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
+        .container {
+            display: flex;
+            width: 400vw; /* Adjust based on the number of sections */
+            height: 100vh;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .section {
+            flex: 0 0 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+        .media-container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            overflow: hidden;
+        }
+        video, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Image -->
+        <div class="section">
+            <div class="media-container">
+                <img src="photo1.jpg" alt="Work 1">
+                <div class="text-overlay" id="text1">This is an explanation of the first work.</div>
+            </div>
         </div>
-        
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="15.mp4" type="video/mp4">
-            <source src="15.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
+        <!-- Section 2: Video -->
+        <div class="section">
+            <div class="media-container">
+                <video id="video1" src="1.mp4"></video>
+                <div class="text-overlay" id="text2">This is an explanation of the second work.</div>
+            </div>
         </div>
-        
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="14.mp4" type="video/mp4">
-            <source src="14.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
+        <!-- Section 3: Video -->
+        <div class="section">
+            <div class="media-container">
+                <video id="video13" src="13.mp4"></video>
+                <div class="text-overlay" id="text2">This is an explanation of the second work.</div>
+            </div>
         </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="13.mp4" type="video/mp4">
-            <source src="13.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
+        <!-- Section 4: Video -->
+        <div class="section">
+            <div class="media-container">
+                <video id="video2" src="2.mp4"></video>
+                <div class="text-overlay" id="text2">This is an explanation of the second work.</div>
+            </div>
         </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="12.mp4" type="video/mp4">
-            <source src="12.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
-        </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="11.mp4" type="video/mp4">
-            <source src="11.ogg" type="video/ogg">
-         could you please try using another browser, please?
-            </video> 
-        </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="10.mp4" type="video/mp4">
-            <source src="10.ogg" type="video/ogg">
-        coould you please try using another browser, please?
-            </video> 
-        </div>
-        <!--<div> 
-            <video width="100%" height="100%" autoplay loop>
-            <source src="3.mp4" type="video/mp4">
-            <source src="3.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-        <div> 
-            <video width="100%" height="100%" autoplay loop>
-            <source src="9.mp4" type="video/mp4">
-            <source src="9.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-            <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="6.mp4" type="video/mp4">
-            <source src="6.ogg" type="video/ogg">
-          başka bir browser dener misin, ltf, tşk
-            </video> 
-       
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="7.mp4" type="video/mp4">
-            <source src="7.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-      
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="4.mp4" type="video/mp4">
-            <source src="4.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="1.mp4" type="video/mp4">
-            <source src="1.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-            <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="2.mp4" type="video/mp4">
-            <source src="2.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>
-        <div> 
-            <video width="100%" height="100%" controls autoplay loop>
-            <source src="8.mp4" type="video/mp4">
-            <source src="8.ogg" type="video/ogg">
-          could you please try using another browser, please?
-            </video> 
-        </div>-->
+        <!-- Add more sections as needed -->
     </div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-    </body>
+    <script>
+        const videos = document.querySelectorAll('video');
+        const textOverlays = document.querySelectorAll('.text-overlay');
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollX;
+            sections.forEach((section, index) => {
+                const sectionPosition = section.offsetLeft;
+                if (scrollPosition >= sectionPosition && scrollPosition < sectionPosition + window.innerWidth) {
+                    if (videos[index]) {
+                        videos[index].play();
+                        textOverlays[index].classList.remove('hidden');
+                    } else {
+                        textOverlays[index].classList.remove('hidden');
+                    }
+                } else {
+                    if (videos[index]) {
+                        videos[index].pause();
+                        videos[index].currentTime = 0;
+                        textOverlays[index].classList.add('hidden');
+                    } else {
+                        textOverlays[index].classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
 </html>
